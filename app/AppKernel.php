@@ -35,6 +35,7 @@ class AppKernel extends Kernel
             new Lexik\Bundle\TranslationBundle\LexikTranslationBundle(),
             new Pix\SortableBehaviorBundle\PixSortableBehaviorBundle(),
             new G\AccentsBundle\GAccentsBundle(),
+            new G\ContentBundle\GContentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -35,6 +35,7 @@
         "lexik/translation-bundle": "2.*@dev",
         "pixassociates/sortable-behavior-bundle": "0.1.*@dev",
         "jms/serializer-bundle": "0.12.0",
+        "sonata-project/core-bundle": "~2.2@dev",
         "sonata-project/doctrine-orm-admin-bundle": "2.3.*@dev"
     },
     "require-dev": {

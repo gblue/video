@@ -4,6 +4,8 @@ imports:
     - { resource: doctrine_extensions.yml }
     - { resource: "@GAccentsBundle/Resources/config/admin.yml" }
     - { resource: "@GAccentsBundle/Resources/config/services.yml" }
+    - { resource: "@GContentBundle/Resources/config/admin.yml" }
+    - { resource: "@GContentBundle/Resources/config/services.yml" }
 parameters:
     locales: %a2lix_translation_form.locales%
 framework:

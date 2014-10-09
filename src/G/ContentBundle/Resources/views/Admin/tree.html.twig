@@ -1,0 +1,28 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends 'SonataAdminBundle:CRUD:base_list.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/sonatapage/tree.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block list_table %}
+    <div class="box box-primary">
+
+        <div class="box-content">
+        	<div style="padding:20px;">
+    			{{tree|raw}}        
+			</div>
+        </div>
+    </div>
+{% endblock %}

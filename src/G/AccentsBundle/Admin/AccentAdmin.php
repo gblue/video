@@ -39,7 +39,6 @@ class AccentAdmin extends Admin
     protected function configureRoutes(RouteCollection $collection)
     {
         parent::configureRoutes($collection);
-        $collection->remove('export');
         $collection->add('history', $this->getRouterIdParameter().'/history');
         $collection->add('history_view_revision', $this->getRouterIdParameter().'/preview/{revision}');
         $collection->add('history_revert_to_revision', $this->getRouterIdParameter().'/revert/{revision}');

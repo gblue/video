@@ -1,5 +1,5 @@
 services:
-    accents.admin.accent:
+    admin.accent:
         class: G\AccentsBundle\Admin\AccentAdmin
         arguments: [~, G\AccentsBundle\Entity\Accent, GAccentsBundle:AccentAdmin]
         tags:
