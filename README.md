@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -174,4 +173,3 @@ video
 =====
 
 thevideonauts
->>>>>>> 48258ce5c37ed4934fdb4c91708cf47a2670ced3
