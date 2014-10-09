@@ -16,6 +16,25 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\IntlBundle\SonataIntlBundle(),
+            new Sonata\UserBundle\SonataUserBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Lexik\Bundle\TranslationBundle\LexikTranslationBundle(),
+            new Pix\SortableBehaviorBundle\PixSortableBehaviorBundle(),
+            new G\AccentsBundle\GAccentsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

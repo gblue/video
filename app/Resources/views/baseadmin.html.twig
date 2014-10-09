@@ -1,0 +1,63 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+
+        <script type="text/javascript" src="{{ asset('bundles/program/js/jquery.gide.js') }}"></script>
+		<script type="text/javascript" src="/js/backend/tinymce/tinymce.min.js"></script>
+		<script>
+		$(function(){
+			tinyMCE.init({
+			    mode:                              "exact",
+			    selector:                          "textarea.tinymce",
+			    theme:                             "modern",
+			    
+			    height: "500px",
+			    theme_advanced_toolbar_location:   "top",
+			    theme_advanced_toolbar_align:      "left",
+			    theme_advanced_statusbar_location: "bottom",
+			    theme_advanced_resizing:           true,
+
+			    plugins: [
+			        "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+			        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+			        "save table contextmenu directionality emoticons template paste textcolor code "
+			    ],
+				image_advtab: true,
+				save_enablewhendirty: true,
+				toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor emoticons | link image | print preview media fullpage", 
+				removed_menuitems: "newdocument, print",
+				file_browser_callback : ajaxfilemanager,
+				language: "bg_BG"
+			});
+		})
+			
+			function ajaxfilemanager(field_name, url, type, win) {
+			    var ajaxfilemanagerurl = "/js/backend/tinymce/plugins/ajaxfilemanager/ajaxfilemanager.php?editor=tinymce4&config=tinymce4&language=cs";
+			    switch (type) {
+			        case "image":
+			            ajaxfilemanagerurl += "&type=img";
+			            break;
+			        case "media":
+			            ajaxfilemanagerurl += "&type=media";
+			            break;
+			        case "file":
+			            ajaxfilemanagerurl += "&type=files";
+			            break;
+			        default:
+			            return false;
+			    }
+			    tinymce.activeEditor.windowManager.open(
+			        {url : ajaxfilemanagerurl,
+			         title : 'Ajax File Manager',
+			         width : 782,
+			         height : 440 },
+			        {window : win,
+			         input : field_name}
+			    );
+			    return false;
+			}
+		</script>
+{% endblock %}
+{% block side_bar_after_nav %}
+    <p class="text-center small" style="padding-top: 10px"><a href="http://www.stenikgroup.com/bg/contacts/request" rel="noreferrer" style="color: #FA6F76" target="_blank">{{'send_request'|trans({}, 'SonataAdminBundle')}}</a></p>
+{% endblock %}

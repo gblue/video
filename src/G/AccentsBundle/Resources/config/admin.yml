@@ -1,0 +1,9 @@
+services:
+    accents.admin.accent:
+        class: G\AccentsBundle\Admin\AccentAdmin
+        arguments: [~, G\AccentsBundle\Entity\Accent, GAccentsBundle:AccentAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: "site", label: "accents"}
+        calls:
+            - [ setTranslationDomain, [GAccentsBundle]]
+
