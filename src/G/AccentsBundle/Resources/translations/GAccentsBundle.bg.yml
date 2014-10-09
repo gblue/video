@@ -1,0 +1,16 @@
+accents: 'Акценти'
+menu.item: 'Основни'
+form:
+  general: 'Основни'
+  more: 'Допълнителни'
+
+  title: 'Заглавие'
+  description: 'Описание'
+  url: 'Линк'
+  is_hidden: 'Скрит'
+  label_image: 'Изображение'
+  created_at: 'Дата на създаване'
+  translations: 'Преовди'
+
+table.label_actions: 'Действия'
+action_history: 'Версии'

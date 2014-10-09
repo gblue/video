@@ -2,7 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: doctrine_extensions.yml }
-    
+    - { resource: "@GAccentsBundle/Resources/config/admin.yml" }
+    - { resource: "@GAccentsBundle/Resources/config/services.yml" }
 parameters:
     locales: %a2lix_translation_form.locales%
 framework:
@@ -271,7 +272,7 @@ sonata_admin:
 
 knp_menu:
     twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
-        template: StenikFrontendBundle:Menu:knp_template.html.twig
+        template: GFrontendBundle:Menu:knp_template.html.twig
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
 
