@@ -1,0 +1,17 @@
+{% if slides is defined and slides is not null and slides|length > 0 %}
+<section class="indexSlider">
+{% for slide in slides %}
+    <div class="slide" style="background-image: url({% path slide.translations[app.request.locale].file, 'reference' %});">
+        <div class="wrapper">
+            <div class="vAlign">
+                <h3 class="title"><a href="{{slide.url ? : '#'}}" title="">{{slide.title}}</a></h3>
+                <article class="content">
+                    <p>{{slide.description|raw}}</p>
+                </article>
+                <a href="{{slide.url ? : '#'}}" title="" class="button big transp next">{{'see_more'|trans({}, 'GSliderBundle')}}</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</section>
+{% endif %}

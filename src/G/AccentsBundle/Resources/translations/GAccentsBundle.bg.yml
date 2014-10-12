@@ -1,5 +1,6 @@
 accents: 'Акценти'
 menu.item: 'Основни'
+site: 'Сайт'
 form:
   general: 'Основни'
   more: 'Допълнителни'

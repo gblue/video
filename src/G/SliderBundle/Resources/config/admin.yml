@@ -1,0 +1,13 @@
+services:
+    sonata.admin.slider:
+        class: G\SliderBundle\Admin\SliderAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "site", label: "Slider" }
+        arguments:
+            - ~
+            - G\SliderBundle\Entity\Slider
+            - GSliderBundle:SliderAdmin
+        calls:
+            - [ setTranslationDomain, [GSliderBundle]]
+            - [ setContainer, [ @service_container ]]
+            - [ setPositionService, [@pix_sortable_behavior.position]]  

@@ -37,6 +37,11 @@ class AccentManager
         // ... because we can find the repo using those two
     }
 
+    public function getRepository()
+    {
+        return $this->repo;
+    }
+
 
     /**
      * @return Comment
@@ -71,13 +76,13 @@ class AccentManager
         if (!$accent->getIsHidden()) {
             return $accent;
         }else{
-            throw new NotFoundHttpException("Акцентът не намерен!");
+            throw new NotFoundHttpException("Акцентът не е намерен!");
         }
     }
 
-    public function getAll($criteria = array(), $orderBy = null, $limit = null, $offset = null)
+    public function getAll($criteria = array(), $orderBy = array('rank' => 'ASC'), $limit = null, $offset = null)
     {
-        $baseCriteria = array('isHidden' => 0, 'isVisible' => 1);
+        $baseCriteria = array('isHidden' => 0, 'isVisible' => 0);
         $finalCriteria = array_merge($baseCriteria, $criteria);
         $accents = $this->repo->findBy($finalCriteria, $orderBy, $limit, $offset);
         return $accents;

@@ -1,0 +1,11 @@
+services:
+    admin.content:
+        class: G\ContentBundle\Admin\ContentAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "site", label: "content" }
+        arguments:
+            - ~
+            - G\ContentBundle\Entity\Content
+            - GContentBundle:ContentAdmin
+        calls:
+            - [ setTranslationDomain, [GContentBundle]]

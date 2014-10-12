@@ -2,8 +2,17 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: doctrine_extensions.yml }
+    - { resource: "@GSettingsBundle/Resources/config/admin.yml" }
+    - { resource: "@GSettingsBundle/Resources/config/services.yml" }
     - { resource: "@GAccentsBundle/Resources/config/admin.yml" }
     - { resource: "@GAccentsBundle/Resources/config/services.yml" }
+    - { resource: "@GContentBundle/Resources/config/admin.yml" }
+    - { resource: "@GContentBundle/Resources/config/services.yml" }
+    - { resource: "@GImagesBundle/Resources/config/services.yml" }
+    - { resource: "@GTranslationBundle/Resources/config/admin.yml"} 
+    - { resource: "@GSliderBundle/Resources/config/admin.yml" }
+    - { resource: "@GSliderBundle/Resources/config/services.yml" }
+    - { resource: "@GMenuBundle/Resources/config/admin.yml" }
 parameters:
     locales: %a2lix_translation_form.locales%
 framework:
@@ -141,65 +150,11 @@ sonata_media:
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 500 , quality: 70}
-        news:
-            providers:
-                - sonata.media.provider.image
-            formats:
-                list:   { width: 120, height: 120, quality: 90 }
-                index:  { width: 216, height: 162, quality: 90 }
-                view: { width: 228, height: 170, quality: 90}
-                homepage: { width: 235, height: 176, quality: 90}
-        news_files:
-            providers:
-                - sonata.media.provider.file
-            formats:
-
-
-        products:
-            providers:
-                - sonata.media.provider.image
-            formats:
-                big:   { width: 260, height:320, quality: 90}
-                index: { width: 233, height: 172, quality: 90}
-                sub: { width: 171, height: 126, quality: 90 }
-        products_files:
-            providers:
-                - sonata.media.provider.file
-            formats:
-
         accents:
             providers:
                 - sonata.media.provider.image
-
             formats:
-                index:   { width: 233, height: 172, quality: 90}
-        partners:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                big:   { width: 397, height: 197, quality: 90}
-                index: { width: 233, height: 172, quality: 90}
-        referentions: 
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                list:   { width: 120, height: 120, quality: 90 }
-                index:    { width: 233, height: 172, quality: 90 }
-        referentions_files: 
-            providers:
-                - sonata.media.provider.file
-
-            formats:
-
-        slider: 
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                list:   { width: 120, height: 120, quality: 90 }
-                small:  { width: 196, height: 196, quality: 90 }
+                index:   { width: 206, height: 171, quality: 90 }
 
     cdn:
         server:
@@ -211,7 +166,7 @@ sonata_media:
             create:     true
     providers:
         image:
-            resizer: sonata.media.resizer.square
+            resizer: sonata.media.resizer.custom
         file:
             service:    sonata.media.provider.file
             resizer:    false

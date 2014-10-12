@@ -1,0 +1,5 @@
+services:
+  settings_manager:
+    class: G\SettingsBundle\Manager\SettingsManager
+    arguments: 
+        entityManager: "@doctrine.orm.entity_manager"

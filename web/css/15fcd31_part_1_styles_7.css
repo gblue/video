@@ -1,0 +1,501 @@
+﻿section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+
+.see-all-post {
+    background-color: #6cc1e0;
+    border: none;
+    font-family: Lato 'Footlight MT';
+    font-weight: normal;
+    border-radius: 100px;
+}
+
+.colored {
+    font-size: 33px;
+    color: #83888B;
+    padding-top: 30px;
+    font-family: Lato 'Footlight MT';
+}
+
+.colored-text {
+    color: #83888B;
+    font-family: Lato 'Footlight MT';
+}
+
+.textcenter {
+    width: 70%;
+    text-align: center;
+}
+
+article {
+    width: 40%;
+    display: inline-block;
+    float: left;
+    margin-left: 60px;
+}
+
+section div {
+    margin-left: 16%;
+}
+
+.white {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+
+.map {
+    background-image: url('../../images/frontend/map_freelancers.png');
+}
+
+.talent-map {
+    color: #474747;
+    font-size: 34px;
+    text-align: center;
+}
+
+.freelancer-man {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+    .freelancer-man img {
+        margin-left: 54%;
+        border-radius: 100px;
+        border: 5px solid #fff;
+        vertical-align: bottom;
+    }
+
+.jumbotron {
+    padding: 30px;
+    color: inherit;
+}
+
+.latest-blog {
+}
+
+
+
+.mission {
+    background-image: url("../../images/frontend/bgr_main_and_whyworkwithus_2.png");
+}
+
+.map #icon-planet {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next-to-img {
+    color: #474747;
+    font-size: 28px;
+}
+
+.mission {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.pad-our-mission {
+    padding-top: 150px;
+    color: #fff;
+    font-size: 63px;
+}
+
+.pad-buttons-bottom {
+    padding-bottom: 100px;
+    padding-top: 20px;
+}
+
+.btn-rounded {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.totop {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 49px;
+    height: 80px;
+}
+
+.yellow {
+    background-color: #e4c00a;
+    color: #023052;
+    font-weight: bold;
+}
+
+.logo {
+    margin-left: 250px;
+}
+
+.background-background {
+    background: none;
+}
+
+.mini-menu {
+    position: fixed;
+}
+
+    .mini-menu ul {
+        display: inline-block;
+        position: relative;
+        padding-top: 4px;
+        overflow: hidden;
+        margin-left: 600px;
+    }
+
+    .mini-menu nav ul li {
+        list-style: none;
+        display: inline-block;
+    }
+
+        .mini-menu nav ul li a {
+            font-size: 12px;
+            display: inline;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+            .mini-menu nav ul li a:hover {
+                text-decoration: none;
+                color: #62c5f7;
+                font-style: oblique;
+            }
+
+.mini-img {
+    margin-left: 5px;
+}
+/*Videos we've done together*/
+colored-title {
+    color: #464646;
+}
+.video-menu nav ul {
+    margin-top: 40px;
+    overflow:hidden;
+    text-align: center;
+}
+.video-menu nav  ul  li {
+    margin: 10px;
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+}
+.video-menu nav  ul  li a {
+
+    color: #474747;
+    list-style: none;
+    text-decoration: none;
+}
+.video-menu nav  ul  li a:hover {
+    color: #6cc1e0;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*PAGE font-face-uri WORK WITH US*/
+.work {
+    background-image: url('../../images/frontend/whyworkBACK.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:initial;
+    padding-bottom:30px;
+}
+.why-work {
+    padding-top:30px;
+    color: #fff;
+}
+.work-head {
+    color: #fff;
+}
+.colored-work {
+    color: #fff;
+    
+}
+.work-with-us {
+    width:100%;
+}
+.article-work {
+    width: 30%;
+    padding-bottom:50px;
+}
+/* PAGE FOUR - FREELANCERS*/
+.freelancers img {
+    max-height:300px;
+}
+div.imagees{  
+    position:relative;  
+}  
+div.description{  
+    position:absolute; 
+    bottom:0px; 
+    left:-10px;  
+    display:inline-block;       
+    font-family: Lato 'Footlight MT'; 
+    font-size:30px;  
+    color:white;  
+}  
+div.description_content{  
+    padding-bottom:50%;
+    padding-left:14%;
+    font-size:25px;
+}  
+.video-text-right {
+    padding-left:30%;
+}
+.description_content h1{
+    font-size:100px;
+    padding:0;
+    margin:0;
+}
+.freelancers section {
+    width:100%;
+    
+}
+.freelancers section article {
+    margin-left:12%;
+    width:30%;
+    display:inline-block;
+}
+.width {
+    width:100%;
+}
+/*PAGE CONTACT FORM*/
+#input-field {
+    padding-left:10px;
+    border: 1px solid white;
+    color: black;
+    background: none;
+    height: 35px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+    ::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+#input-field:focus {
+    background: white;
+    
+}
+select {
+    padding-left: 10px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+    height: 35px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+option {
+    color: black;
+}
+#submit-request {
+    border: 1px solid white;
+    color: #474747;
+    background: #ffd202;
+    height: 35px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+#submit-request:hover {
+    border: 1px solid white;
+    color: #474747;
+    background: orange;
+    font-weight: bold;
+    height: 35px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+.fixed-heads {
+    font-size: 1.7em;
+}
+.txt {
+    color: white;
+}
+.footer-txt {
+    margin-left: 30px;
+    color: white;
+    font-size: 18px;
+    float: left;
+}
+.contactform {
+    background-color:#61C2E5;
+}
+.contactform section {
+    width:100%;
+}
+.contactform section article {
+    display:inline-block;
+    width:40%;
+}
+.contactform section article img {
+    max-height:30px;
+    padding-left:30px;
+}
+.contactform section article p img {
+    max-height:40px;
+    margin-bottom:20px;
+    margin-left:20px;
+}
+.footers {
+   background-image: url('../../images/frontend/map_clients_and_footer.jpg');
+   text-align:right;
+}
+.footers ul {
+    margin-right:20%;
+}
+.footers ul li {
+    text-decoration:none;
+    list-style:none;
+    display:inline-block;
+    text-align:right;
+    
+}
+.footers ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+.footers ul li a:hover {
+    color: #61C2E5;
+}
+@media screen and (max-width:680px) {
+
+   .video-menu  nav  ul  li a {
+     
+    border-radius: 5px;
+    margin-top: 0px;
+    width: 90%;
+    background: black;
+    }
+}
+
+@media screen and (max-width:1210px) {
+
+    .logo {
+        margin-left: 150px;
+    }
+
+    .mini-menu ul {
+        margin-left: 500px;
+    }
+}
+
+@media screen and (max-width:1110px) {
+    .nav > li > a {
+        padding-right: 0px;
+    }
+
+    .logo {
+        margin-left: 80px;
+    }
+
+    .mini-menu ul {
+        margin-left: 400px;
+    }
+}
+
+@media screen and (max-width:964px) {
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .mini-menu ul {
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width:946px) {
+
+    .logo {
+        position: fixed;
+        top: 0px;
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width:905px) {
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .mini-menu ul {
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width:764px) {
+
+
+    .mini-menu ul {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:680px) {
+
+    .images-blog {
+        overflow: hidden;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:610px) {
+
+    .mini-menu ul {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:510px) {
+
+    span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:422px) {
+    .freelancer-man img {
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width:400px) {
+        #input-field, #submit-request, select {
+        width: 200px;
+        margin-left: 5px;
+    }
+    #submit-request:hover {
+        width: 200px;
+    }
+    .footers ul li {
+        width: 100%;
+        background: none;
+    }   
+}
+
+
+

@@ -1,0 +1,6 @@
+services:
+    manager.content:
+        class: G\ContentBundle\Entity\ContentManager
+        arguments:
+            em: "@doctrine.orm.entity_manager"
+            class: G\ContentBundle\Entity\Content

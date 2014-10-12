@@ -1,3 +1,32 @@
+g_translation:
+    resource: "@GTranslationBundle/Controller/"
+    type:     annotation
+    prefix:   /{_locale}
+
+g_settings:
+    resource: "@GSettingsBundle/Resources/config/routing.yml"
+    prefix:   /settings
+
+g_menu:
+    resource: "@GMenuBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+g_projects:
+    resource: "@GProjectsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+g_layout:
+    resource: "@GLayoutBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+g_content:
+    resource: "@GContentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 g_accents:
     resource: "@GAccentsBundle/Controller/"
     type:     annotation
