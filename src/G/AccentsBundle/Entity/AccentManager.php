@@ -82,7 +82,7 @@ class AccentManager
 
     public function getAll($criteria = array(), $orderBy = array('rank' => 'ASC'), $limit = null, $offset = null)
     {
-        $baseCriteria = array('isHidden' => 0, 'isVisible' => 1);
+        $baseCriteria = array('isHidden' => 0, 'isVisible' => 0);
         $finalCriteria = array_merge($baseCriteria, $criteria);
         $accents = $this->repo->findBy($finalCriteria, $orderBy, $limit, $offset);
         return $accents;

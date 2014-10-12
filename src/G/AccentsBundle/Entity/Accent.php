@@ -69,9 +69,9 @@ class Accent
      * @var boolean
      *
      * @Gedmo\Versioned
-     * @ORM\Column(name="is_visible", type="boolean", nullable=true)
+     * @ORM\Column(name="is_visible", type="boolean", options={"default": 0},nullable=true)
      */
-    private $isVisible;
+    private $isVisible = 0;
 
     /**
      * @var integer

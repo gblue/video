@@ -1,0 +1,6 @@
+services:
+    manager.slider:
+        class: G\SliderBundle\Entity\SliderManager
+        arguments:
+            em: "@doctrine.orm.entity_manager"
+            class: G\SliderBundle\Entity\Slider

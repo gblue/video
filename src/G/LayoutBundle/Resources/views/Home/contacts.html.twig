@@ -1,0 +1,32 @@
+<section>
+    <article>
+        <h2 class="center-block white text-uppercase fixed-heads"> Request a consultation</h2>
+        <form name="contact" method="post" action="#">
+            <input id="input-field" type="text" name="name" autocomplete="on" autofocus placeholder="Your name" required />
+            <br />
+            <input id="input-field" type="email" name="email" autocomplete="on" placeholder="Your e-mail" required />
+            <br />
+            <select>
+                <option value="Select Project">Select Project</option>
+                <option value="1">#1</option>
+                <option value="2">#2</option>
+                <option value="3">#3</option>
+                <option value="4">#4</option>
+            </select>
+            <br />
+            <input id="submit-request" type="submit" class="text-uppercase" value="SUBMIT REQUEST" />
+        </form>
+    </article>
+    <article>
+        <h2 class="center-block white text-uppercase fixed-heads">{{'stay_connected'|trans({}, 'GLayoutBundle')}}</h2>
+        <a href="{{fb}}"><img src="/images/frontend/facebook-ico.png" /></a>
+        <a href="{{twitter}}"><img src="/images/frontend/twitter-ico.png" /></a>
+        <a href="{{gp}}"><img src="/images/frontend/google-plus-256.png" /></a>
+        <a href="{{youtube}}"><img src="/images/frontend/YouTube_light_color_icon.png" /></a>
+        <br />
+        <br />
+        <p class="txt">
+            Have a question ?<br /> chat with us!<img src="/images/frontend/bubble.png" />
+        </p>
+    </article>
+</section>

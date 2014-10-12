@@ -1,0 +1,4 @@
+services:
+    sonata.media.resizer.custom:
+        class: G\ImagesBundle\Resizer\CustomResizer
+        arguments: [@sonata.media.adapter.image.gd, 'outbound', @sonata.media.metadata.proxy]

@@ -1,0 +1,11 @@
+services:
+    sonata.admin.translations:
+        class: G\TranslationBundle\Admin\TranslationAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "settings", label: "translations" }
+        arguments:
+            - ~
+            - ~
+            - GTranslationBundle:TranslationAdmin
+        calls:
+            - [ setTranslationDomain, [GTranslationBundle]]

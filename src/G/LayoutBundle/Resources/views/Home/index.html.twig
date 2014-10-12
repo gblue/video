@@ -1,0 +1,263 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <div class="mini-menu">
+    {% render(controller("GLayoutBundle:Layout:miniMenu")) %}
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="logo">
+                <a class="navbar-brand" href="#"><img src="/images/frontend/logo_TVN.png" class="img-responsive" /> </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div id="navigation">
+
+                    <ul class="nav navbar-nav cl-effect-3">
+                        <li>
+                            <a href="#talentmap" class="text-uppercase">Talent map</a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="text-uppercase">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#morevideos" class="text-uppercase">More Videos</a>
+                        </li>
+                        <li>
+                            <a href="#meetall" class="text-uppercase">Meet All Talents</a>
+                        </li>
+                        <li>
+                            <a href="#howitworks" class="text-uppercase">How it works</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <div class="container-fluid">
+
+        <!-- -----------------------------------PAGE ONE - OUR MISSION-------------------------------------- -->
+
+        <div id="page-one">
+            <a id="home"></a>
+
+            <div class="jumbotron mission">
+                <div class="row">
+
+                    <h1 class="text-center pad-our-mission">{{content.title}}</h1>
+
+                    <p class="text-center white">{{content.description|raw}}</p>
+                    <p class="text-center white pad-buttons-bottom">
+                        <a href="#" class="btn btn-primary btn-lg btn-rounded background-background" role="button">WORK WITH THE <br /> COMMUNITY</a>
+                        OR
+                        <a href="#" class="btn btn-primary btn-lg btn-rounded yellow" role="button">JOIN <br />THE COMMUNITY</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- ----------------------------------- PAGE TWO - TALENT MAP -------------------------------------- -->
+        <div id="page-two">
+
+            <a id="talentmap"></a>
+
+            <div class="jumbotron map">
+                <div class="row">
+                    <img id="icon-planet" src="/images/frontend/icon_planet.png" />
+                    <h1 class="talent-map">Talent map</h1>
+                    <div class="freelancer-man">
+
+                        <img src="/images/frontend/image_freelancer_map_2.png" class="" />
+                        <span class="next-to-img">John Smith</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------- PAGE THREE - BLOG -------------------------------------- -->
+        <div id="page-three">
+
+            <a id="blog"></a>
+
+            <div class="jumbotron latest-blog">
+                <div class="row">
+
+                    <h2 class="text-center">Latest from our blog</h2>
+
+                    <section>
+                        <div>
+                            <article class="center-block">
+
+
+                                <img src="/images/frontend/l9.jpg" class="img-responsive center-block" />
+
+                                <h3 class="text-center colored">Leo Bandeo</h3>
+                                <div class="textcenter">
+                                    <p class="text-center colored-text">I am a visual person. I am sold on the visual aspect of what i am potntially buying, I think most of us are like this. If it doesnt't.</p>
+                                </div>
+                                <p class="text-center"><a href="#">Read More</a></p>
+                            </article>
+
+                            <article class="center-block">
+
+                                <img src="/images/frontend/l8.jpg" class="img-responsive center-block" />
+
+                                <h3 class="text-center colored">Mira Kadira </h3>
+                                <div class="textcenter">
+                                    <p class="text-center colored-text">I am a visual person. I am sold on the visual aspect of what i am potntially buying, I think most of us are like this. If it doesnt't.</p>
+                                </div>
+                                <p class="text-center"><a href="#">Read More</a></p>
+                            </article>
+                        </div>
+
+                    </section>
+                    <p class="text-center">
+                        <a href="#" class="btn btn-primary btn-lg see-all-post" role="button">See all <br /> posts</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------- PAGE FOUR - VIDEOS -------------------------------------- -->
+
+        <div id="page-four">
+            <a id="morevideos"></a>
+
+            <div class="jumbotron videos-done">
+                <div class="row">
+
+                    <h2 class="text-center colored-title">Videos we-ve done together</h2>
+                    <div class="video-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Video</a></li>
+                                <li><a href="#">Motion</a></li>
+                                <li><a href="#">3D</a></li>
+                                <li><a href="#">Video+Motion</a></li>
+                                <li><a href="#">Stop Motion</a></li>
+                                <li><a href="#">Video+3D</a></li>
+                                <li><a href="#">All</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                        <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                width="300" height="230" src="http://www.youtube.com/embed/W-Q7RMpINVo"
+                                frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------- PAGE FOUR - WHY WORK WITH US -------------------------------------- -->
+        <div id="page-four">
+
+            <a id="work"></a>
+
+            <div class="jumbotron work">
+                <div class="row">
+
+                    <h2 class="text-center why-work">Why work with us</h2>
+
+                    <section class="work-with-us">
+                        <div>
+                        {% for item in accents %}
+                            <article class="center-block article-work">
+                                {% thumbnail item.image, 'index' with {"class":"img-responsive center-block"} %}
+                                <h3 class="text-center work-head">{{item.title}}</h3>
+                                <div class="textcenter">
+                                    <p class="text-center colored-work">{{item.description}}</p>
+                                </div>
+                            </article>
+                        {% endfor %}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------- PAGE FIVE - MEET ALL TALENTS -------------------------------------- -->
+        <div id="page-five">
+            <a id="meetall"></a>
+            <div class="jumbotron freelancers">
+                <div class="row">
+                    <section>
+                        <article>
+                            <div class="imagees">
+                                <img src="/images/frontend/freelancers-1.png" class="img-responsive" />
+                                <div class="description">
+                                    <div class="description_content"><h1>61</h1> <p class="video-text-right">Videos </p></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="imagees">
+                                <img src="/images/frontend/freelancers-2.png" class="img-responsive" />
+                                <div class="description">
+                                    <div class="description_content"><h1>23</h1> <p class="">Freelancers </p></div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <img src="/images/frontend/contact-svarzvane.png" class="width" />
+        <div id="page-five">
+
+            <a id="contact"></a>
+
+            <div class="jumbotron contactform">
+                <div class="row">
+                    {% render(controller("GLayoutBundle:Layout:contacts")) %}
+                </div>
+            </div>
+            <img src="/images/frontend/footer-connect.png" class="width" />
+            <div class="jumbotron footers">
+                <p class="footer-txt">
+                    &copy;The Videonauts
+                </p>
+                <ul>
+                	<li><a href="#">About</a></li>
+                	<li><a href="#">Blog</a></li>
+                	<li><a href="#">Terms</a></li>
+                	<li><a href="#">Privacy</a></li>
+                	<li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--button to top-->
+        <a href="#home" class="totop" role="button"><img src="/images/frontend/to_top.png" class="totop" /></a>
+    </div>
+{% endblock %}

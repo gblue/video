@@ -1,5 +1,5 @@
 <?php 
-namespace Stenik\ContentBundle\Entity;
+namespace G\ContentBundle\Entity;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;

@@ -1,0 +1,9 @@
+settings_list:
+    pattern:      /list
+    defaults:     { _controller: "GSettingsBundle:Rest:list" }
+    requirements: { _method: GET }
+
+settings_update:
+    pattern:      /{id}
+    defaults:     { _controller: "GSettingsBundle:Rest:update" }
+    requirements: { _method: PUT }

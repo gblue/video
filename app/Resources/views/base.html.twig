@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        {% block meta %}
+            {% block meta_title %}
+                <title>Welcome!</title>
+            {% endblock %}
+
+            {% block meta_keywords %}
+                <meta name="keywords" content="test">
+            {% endblock %}
+            {% block meta_description %}
+                <meta name="description" content="test">
+            {% endblock %}
+        {% endblock %}
+        {% block stylesheets %}
+            {% stylesheets 'css/frontend/*'  %}
+                <link rel="stylesheet"  type="text/css" href="{{ asset_url }}">
+            {% endstylesheets %}
+        {% endblock %}
+        <link href="images/frontend/favicon.png" rel="shortcut icon">
+        {% block javascripts %}
+            {% javascripts 'js/frontend/*' %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </head>
-    <body>
+    <body class="frontend">
+    </noscript>  
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
     </body>
 </html>

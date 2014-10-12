@@ -1,0 +1,109 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+
+{% block stylesheets %}
+
+    {{ parent() }}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('bundles/lexiktranslation/ng-table/ng-table.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/lexiktranslation/css/translation.css') }}">
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+  	{{ parent() }}
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="{{ asset('bundles/lexiktranslation/ng-table/ng-table.min.js') }}"></script>
+
+    <script>
+        var translationCfg = {
+            locales: {{ locales | json_encode | raw }},
+            inputType: '{{ inputType }}',
+            url: {
+                list: '{{ path('settings_list') }}',
+                update: '{{ path('settings_update', {'id': '-id-'}) }}',
+                invalidateCache: '{{ path('lexik_translation_invalidate_cache') }}'
+            },
+            label: {
+                hideCol: '{{ 'translations.show_hide_columns'|trans({}, 'GSettingsBundle') }}',
+                invalidateCache: '{{ 'translations.invalidate_cache'|trans({}, 'GSettingsBundle') }}',
+                saveRow: '{{ 'translations.save_row'|trans({}, 'GSettingsBundle') }}',
+                label: '{{ 'settings.label'|trans({}, 'GSettingsBundle') }}',
+                name: '{{ 'settings.name'|trans({}, 'GSettingsBundle') }}',
+                value: '{{ 'settings.value'|trans({}, 'GSettingsBundle') }}',
+                visible: '{{ 'settings.visible'|trans({}, 'GSettingsBundle') }}',
+                save: '{{ 'translations.save'|trans({}, 'GSettingsBundle') }}',
+                successMsg: '{{ 'translations.succesfully_updated'|trans({}, 'GSettingsBundle') }}',
+                errorMsg: '{{ 'translations.update_failed'|trans({}, 'GSettingsBundle') }}'
+            },
+            editable: {
+                label: {% if is_granted("ROLE_SUPER_ADMIN") %} true {% else %} false {% endif %},
+                name: true,
+                value: true,
+                visible: {% if is_granted("ROLE_SUPER_ADMIN") %} true {% else %} false {% endif %}
+            },
+            visible: {
+                label: true,
+                name: true,
+                value: true,
+                visible: {% if is_granted("ROLE_SUPER_ADMIN") %} true {% else %} false {% endif %}
+            }
+        };
+    </script>
+
+   <script src="{{ asset('bundles/gsettings/js/app.js') }}"></script>
+{% endblock %}
+
+
+
+{% block sonata_admin_content %}
+
+    {% block flash_message %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% set flashes = app.session.flashbag.all() %}
+                    {% set css = {'error': 'warning', 'success': 'success', 'sonata_flash_success': 'success', 'sonata_flash_error' : 'warning'} %}
+
+                    {% if flashes | length > 0 %}
+                        {% for type, messages in flashes %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ css[type] }}">{{ message }}</div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endblock flash_message %}
+
+	{% block content %}
+        
+	    <div class="container">
+	        {% block toolbar %}
+	            <div class="page-header">
+	                <h1>
+	                    {{ 'settings'|trans({}, 'GSettingsBundle') }}
+	                </h1>
+                    {% if is_granted("ROLE_SUPER_ADMIN") %}
+                        <div class="pull-right">
+                            <a href="{{ admin.generateUrl('create') }}" role="button" class="btn btn-success">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                {{ 'settings.new_entry'|trans({}, 'GSettingsBundle') }}
+                            </a>
+                        </div>
+                    {% endif %}
+	            </div>
+	        {% endblock toolbar %}
+
+	        {% block data_grid %}
+	            {% include 'GSettingsBundle:Admin:_ngGrid.html.twig' %}
+	        {% endblock data_grid %}
+	    </div>
+	{% endblock %}
+
+
+{% endblock sonata_admin_content %}
